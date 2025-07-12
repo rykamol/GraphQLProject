@@ -3,6 +3,9 @@ using GraphQLProject.Models;
 
 namespace GraphQLProject.Services
 {
+    //dependency inj is a design pattern that allows us to make a class fully intependent
+    // of it's depedencies, rather that relaying on the concreate implementation we use 
+    //interfaces which grately enhance the maintability of the code.
     public class MenuRepository : IMenuRepository
     {
         private static List<Menu> MenuList = new List<Menu>()
