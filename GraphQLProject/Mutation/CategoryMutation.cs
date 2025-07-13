@@ -10,7 +10,7 @@ namespace GraphQLProject.Mutation
     {
         public CategoryMutation(ICategoryRepository categoryRepository)
         {
-            Field<CategoryInputType>("CreateCategory")
+            Field<CategoryType>("CreateCategory")
                .Arguments(new QueryArguments(new QueryArgument<CategoryInputType> { Name = "category" }))
                .Resolve(context =>
                {
@@ -18,7 +18,7 @@ namespace GraphQLProject.Mutation
                });
 
 
-            Field<CategoryInputType>("UpdateCategory")
+            Field<CategoryType>("UpdateCategory")
               .Arguments(new QueryArguments(
                   new QueryArgument<IntGraphType> { Name = "categoryId" },
                   new QueryArgument<CategoryInputType> { Name = "category" }))

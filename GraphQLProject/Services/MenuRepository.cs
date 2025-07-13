@@ -48,6 +48,8 @@ namespace GraphQLProject.Services
             updateMenu.ImageUrl = menu.ImageUrl;
             updateMenu.CategoryId = menu.CategoryId;
 
+            _dbContext.SaveChanges();
+
             return menu;
         }
     }

@@ -9,7 +9,7 @@ namespace GraphQLProject.Type
         {
             Field<IntGraphType>("id");
             Field<StringGraphType>("name");   
-            Field<FloatGraphType>("imageUrl");         
+            Field<StringGraphType>("imageUrl");         
         }
     }
 }

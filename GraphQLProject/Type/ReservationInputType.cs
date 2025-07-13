@@ -10,10 +10,10 @@ namespace GraphQLProject.Type
             Field<IntGraphType>("id");
             Field<StringGraphType>("customerName");   
             Field<StringGraphType>("email");   
-            Field<FloatGraphType>("phoneNumber");         
-            Field<FloatGraphType>("partySize");         
-            Field<FloatGraphType>("specialRequest");         
-            Field<FloatGraphType>("reservationDate");         
+            Field<StringGraphType>("phoneNumber");         
+            Field<IntGraphType>("partySize");         
+            Field<StringGraphType>("specialRequest");         
+            Field<DateTimeGraphType>("reservationDate");         
         }
     }
 }
