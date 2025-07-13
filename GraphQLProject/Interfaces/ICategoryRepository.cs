@@ -4,9 +4,9 @@ namespace GraphQLProject.Interfaces
 {
     public interface ICategoryRepository
     {
-        List<Category> GetAllCategories();
+        List<Category> GetCategories();
         Category AddCategory(Category category);
-        Category UpdateCategory(int menuId, Category category);
+        Category UpdateCategory(int id, Category category);
         void DeleteCategory(int id);
     }
 }
