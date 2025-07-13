@@ -31,9 +31,13 @@ builder.Services.AddTransient<RootQuery>();
 
 builder.Services.AddTransient<ISchema, RootSchema>();
 
-
-//builder.Services.AddTransient<MenuInputType>();
 //builder.Services.AddTransient<MenuMutation>();
+
+builder.Services.AddTransient<MenuInputType>();
+builder.Services.AddTransient<CategoryInputType>();
+builder.Services.AddTransient<ReservationInputType>();
+
+
 
 
 builder.Services.AddGraphQL(b => b.AddAutoSchema<ISchema>().AddSystemTextJson());
