@@ -31,7 +31,10 @@ builder.Services.AddTransient<RootQuery>();
 
 builder.Services.AddTransient<ISchema, RootSchema>();
 
-//builder.Services.AddTransient<MenuMutation>();
+builder.Services.AddTransient<MenuMutation>();
+builder.Services.AddTransient<CategoryMutation>();
+builder.Services.AddTransient<ReservationMutation>();
+builder.Services.AddTransient<RootMutation>();
 
 builder.Services.AddTransient<MenuInputType>();
 builder.Services.AddTransient<CategoryInputType>();
