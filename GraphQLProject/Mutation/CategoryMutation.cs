@@ -10,7 +10,7 @@ namespace GraphQLProject.Mutation
     {
         public CategoryMutation(ICategoryRepository categoryRepository)
         {
-            Field<MenuType>("CreateCategory")
+            Field<CategoryInputType>("CreateCategory")
                .Arguments(new QueryArguments(new QueryArgument<CategoryInputType> { Name = "category" }))
                .Resolve(context =>
                {
@@ -18,7 +18,7 @@ namespace GraphQLProject.Mutation
                });
 
 
-            Field<MenuType>("UpdateCategory")
+            Field<CategoryInputType>("UpdateCategory")
               .Arguments(new QueryArguments(
                   new QueryArgument<IntGraphType> { Name = "categoryId" },
                   new QueryArgument<CategoryInputType> { Name = "category" }))
@@ -37,7 +37,7 @@ namespace GraphQLProject.Mutation
               {
                   var categoryId = context.GetArgument<int>("categoryId");
                    categoryRepository.DeleteCategory(categoryId);
-                  return "The category against this Id" + categoryId + " has been deleted!";
+                  return "The menu against this Id" + categoryId + " has been deleted!";
               });
         }
     }

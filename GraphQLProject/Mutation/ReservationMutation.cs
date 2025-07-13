@@ -10,7 +10,7 @@ namespace GraphQLProject.Mutation
     {
         public ReservationMutation(IReservationRepository reservationRepository)
         {
-            Field<MenuType>("CreateReservation")
+            Field<ReservationInputType>("CreateReservation")
                .Arguments(new QueryArguments(new QueryArgument<ReservationInputType> { Name = "reservation" }))
                .Resolve(context =>
                {
