@@ -11,8 +11,8 @@ namespace GraphQLProject.Type
             Field<StringGraphType>("name");
             Field<StringGraphType>("description");
             Field<FloatGraphType>("price");
-            Field<FloatGraphType>("imageUrl");
-            Field<FloatGraphType>("categoryId");
+            Field<StringGraphType>("imageUrl");
+            Field<IntGraphType>("categoryId");
         }
     }
 }
